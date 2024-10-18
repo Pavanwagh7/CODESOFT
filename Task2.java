@@ -42,6 +42,10 @@ public class Task2 {
 
         print_Student_Info(name,std,percent,maths,sci,hindi,history,polity,geog); //this method is called t print the details and the result of student
     }
+    static void total_marks(int maths,int sci,int hindi,int history,int polity,int geog){
+        double total = maths + sci + hindi + history + polity + geog;
+        System.out.println("Total marks (out of 600) = " + total);
+    }
     static double calculate_percentage(int maths,int sci,int hindi,int history,int polity,int geog){
         return (maths + sci + hindi + history + polity + geog)/6;
     }
@@ -63,6 +67,9 @@ public class Task2 {
         System.out.println();
         System.out.print("Geography = " + geog);
         System.out.println("\n");
+
+        //desplaying total marks out of 600
+        total_marks(maths,sci,hindi,history,polity,geog);
 
         //displaying percentage
         System.out.print("percentage (%) = " + percent + " %");

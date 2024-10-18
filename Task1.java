@@ -13,7 +13,7 @@ public class Task1 {
         Random rmd = new Random();
         int generated_num = rmd.nextInt(100) + 1;
 
-        System.out.print("Enter you guess (Guess the number between 1 to 100) : ");
+        System.out.print("Enter your guess (Guess the number between 1 to 100) : ");
         int guess = sc.nextInt();
 
         guess(guess,generated_num,sc);
@@ -25,9 +25,9 @@ public class Task1 {
         while (guess != generated_num) {
 
             if (guess > generated_num)
-                System.out.print("Your guess is too high.Enter you guess again : ");
+                System.out.print("Your guess is too high.Enter your guess again : ");
             else if (guess < generated_num)
-                System.out.print("Your guess is too low.Enter you guess again : ");
+                System.out.print("Your guess is too low.Enter your guess again : ");
             guess = sc.nextInt();
 
             attempts  = attempts + 1;
@@ -45,6 +45,6 @@ public class Task1 {
         else if (attempts == 5)
             System.out.println("Your guess is correct.Your score is 20.You won!");
         else
-            System.out.println("Your guess is wrong.Your score is 0.You Failed!");
+            System.out.println("You have used your all attempts the correct number was " + generated_num + ".Your score is 0.You Failed!");
     }
 }

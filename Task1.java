@@ -8,20 +8,21 @@ public class Task1 {
 
         System.out.println("NUMBER GAME\nTotal number of chances is 6\n");
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);   //object of Scanner class
 
-        Random rmd = new Random();
-        int generated_num = rmd.nextInt(100) + 1;
+        Random rmd = new Random();   //object of Random class
+        int generated_num = rmd.nextInt(100) + 1;   //this will generate random number from 0 to 99 and then adds 1 to it
 
         System.out.print("Enter your guess (Guess the number between 1 to 100) : ");
-        int guess = sc.nextInt();
+        int guess = sc.nextInt();              //input guess
 
-        guess(guess,generated_num,sc);
+        guess(guess,generated_num,sc);  //calling guess(); method
 
     }
     static void guess(int guess,int generated_num,Scanner sc){
         int attempts = 1;
 
+        //while loop with condition (guess != generated_num)
         while (guess != generated_num) {
 
             if (guess > generated_num)
@@ -34,6 +35,7 @@ public class Task1 {
             if(attempts == 6)
                 break;
         }
+        // desplaying score based on number of attempts taken
         if(attempts == 1)
             System.out.println("Your guess is correct.Your score is 100.You won!");
         else if (attempts == 2)
